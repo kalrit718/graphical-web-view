@@ -1,24 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import ContextMenu from './components/context-menu/ContextMenu';
+import AddNewButton from './components/add-new-button/AddNewButton';
+import PropertyDialog from './components/property-dialog/PropertyDialog';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AddNewButton />
     </div>
   );
 }
