@@ -3,18 +3,19 @@ import { Button, OverlayTrigger, Popover, Row } from 'react-bootstrap'
 import ContextMenu from '../context-menu/ContextMenu'
 import './AddNewButton.css'
 import PropertyDialog, { PropertyDialogTypes } from '../property-dialog/PropertyDialog'
+import {ReactComponent as AddNewButtonIcon} from '../../assets/icons/add_new.svg';
 
 type Props = {}
 
 type State = {
-  showDialog: boolean,
-  propDialogType: PropertyDialogTypes
+  // showDialog: boolean,
+  // propDialogType: PropertyDialogTypes
 }
 
 export default class AddNewButton extends Component<Props, State> {
   state = {
-    showDialog: false,
-    propDialogType: PropertyDialogTypes.API_PROPERTY_DIALOG
+    // showDialog: false,
+    // propDialogType: PropertyDialogTypes.API_PROPERTY_DIALOG
   }
 
   popover: JSX.Element = (
@@ -25,12 +26,13 @@ export default class AddNewButton extends Component<Props, State> {
 
   render() {
     return (
-      <Row>
+      <Row id='add-new-button-component'>
         <OverlayTrigger rootClose trigger="click" placement="auto-start" overlay={this.popover}>
-            <div className='add-new-button'>+</div>
+            <div className='add-new-button'><AddNewButtonIcon id='add-new-button-icon' className='' /></div>
+            {/* <div className='add-new-button'><img src='../../assets/icons/add_new.svg' alt="add new icon" /></div> */}
         </OverlayTrigger>
 
-        <Button onClick={() => {
+        {/* <Button onClick={() => {
           this.setState({propDialogType: PropertyDialogTypes.API_PROPERTY_DIALOG})
           this.setState({showDialog: true});
         }}>Test API</Button>
@@ -40,7 +42,7 @@ export default class AddNewButton extends Component<Props, State> {
           this.setState({showDialog: true});
         }}>Test Resource</Button>
 
-        { this.state.showDialog && <PropertyDialog toggleToClose={() => this.setState({showDialog: false})} dialogType={this.state.propDialogType} />}
+        { this.state.showDialog && <PropertyDialog toggleToClose={() => this.setState({showDialog: false})} dialogType={this.state.propDialogType} />} */}
       </Row>
     )
   }

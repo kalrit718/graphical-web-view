@@ -5,11 +5,12 @@ import './App.css';
 import ContextMenu from './components/context-menu/ContextMenu';
 import AddNewButton from './components/add-new-button/AddNewButton';
 import PropertyDialog from './components/property-dialog/PropertyDialog';
+import ApiCanvas from './components/api-canvas/ApiCanvas';
 
 function App() {
   return (
     <div className="App">
-      <AddNewButton />
+      <ApiCanvas />
     </div>
   );
 }

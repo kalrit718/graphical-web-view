@@ -1,0 +1,19 @@
+#api-canvas-shell {
+    background-color: bisque;
+    margin: 20px;
+    padding: 15px;
+    height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: column;
+}
+
+#canvas-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: larger;
+    height: fit-content;
+}
+
+#add-new-button-strip {
+    height: fit-content;
+}
